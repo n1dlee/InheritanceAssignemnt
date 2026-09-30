@@ -1,0 +1,70 @@
+FREECELL - TEST RESULTS
+Date: 2026-09-30 11:44
+Files tested: Card.java, CardStack.java, Cascade.java, Cell.java, Deck.java, Foundation.java, Freecell.java, FreecellGame.java
+
+Compile exit code: 0 (0 = success)
+'package' lines found in .java files: 0
+
+---- Unit and file tests ----
+== CardStack ==
+PASS  new stack is empty, size 0
+PASS  getTopCard on empty is null
+PASS  removeTopCard on empty is null
+PASS  toString on empty is empty string
+PASS  toString uses comma+space: AC, 2C, 3d
+PASS  top card is 3d
+PASS  toArray bottom to top
+PASS  addCard(null) ignored
+PASS  playTo(emptyStack) returns false
+== Cell ==
+PASS  cell accepts card when empty
+PASS  cell rejects 2nd card
+== Foundation ==
+PASS  foundation rejects non-ace on empty
+PASS  foundation accepts ace
+PASS  foundation rejects wrong suit
+PASS  foundation rejects skipped rank
+PASS  foundation accepts next rank same suit
+PASS  cannot play from foundation
+PASS  playTo(CardStack) from foundation refused
+== Cascade ==
+PASS  cascade accepts any card when empty (and stores it)
+PASS  black 5 on red 6 accepted
+PASS    ...and card was actually added (size 2)
+PASS  red 5 on black 6 accepted
+PASS    ...and card was actually added (size 2)
+PASS  red 5 on red 6 rejected
+PASS  black 7 on red 6 rejected (wrong rank)
+PASS  black 6 on red 6 rejected (same rank)
+== Moves through stacks ==
+PASS  cascade->cascade legal move works
+PASS    source lost card, dest gained it
+PASS  illegal move leaves both stacks unchanged
+== FreecellGame ==
+PASS  all 52 cards present after deal
+PASS  deck (0) is empty after deal
+PASS  cascade sizes 7,7,7,7,6,6,6,6
+PASS  getStack out of range returns null
+PASS  not game over at start
+PASS  play 0 -> 1 rejected
+PASS  play 1 -> 17 rejected
+PASS  play x -> x rejected
+PASS  play from empty cell rejected
+PASS  play from foundation rejected
+PASS  cascade -> cell legal
+PASS  toString contains headers
+PASS  toString formats ' 1: ' and ' 9: ' and '10: '
+== File test: java-board-0.board vs deal(seed 0) ==
+PASS  deal matches board file (8 cascades read: 8)
+== File test: input.txt -> transcript.txt ==
+PASS  all 165 moves in input.txt are legal (illegal: 0)
+PASS  game is over after input.txt
+
+RESULT: 45 passed, 0 failed
+
+---- Transcript comparison (java-board-0.input.txt vs java-board-0.transcript.txt, seed 0) ----
+Expected non-blank lines: 3320
+Actual non-blank lines:   3320
+Differences:              0
+Game ended with 'You win!': True
+Note: blank lines and the typed-input echo are ignored in this comparison.

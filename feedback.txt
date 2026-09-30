@@ -1,0 +1,67 @@
+Testing initiated. Wed Sep 30 11:46:39 AM EDT 2026
+NOTE: Written questions will be evaluated manually.
+Card.java submitted.
+CardStack.java submitted.
+Cascade.java submitted.
+Cell.java submitted.
+Deck.java submitted.
+Foundation.java submitted.
+Freecell.java submitted.
+FreecellGame.java submitted.
+Compilation of all java files succeeded.
+Testing Card:
+JUnit version 4.13.2
+....
+Time: 0.01
+
+OK (4 tests)
+
+Testing CardStack:
+JUnit version 4.13.2
+.......E...
+Time: 0.012
+There was 1 failure:
+1) testCanPlayFrom(CardStackJUnitTest)
+java.lang.AssertionError: CardStack: canPlayFrom allows play from empty stack.
+	at org.junit.Assert.fail(Assert.java:89)
+	at CardStackJUnitTest.testCanPlayFrom(CardStackJUnitTest.java:22)
+
+FAILURES!!!
+Tests run: 10,  Failures: 1
+
+Testing Cascade:
+JUnit version 4.13.2
+.
+Time: 0.013
+
+OK (1 test)
+
+Testing Cell:
+JUnit version 4.13.2
+.
+Time: 0.009
+
+OK (1 test)
+
+Testing Deck:
+JUnit version 4.13.2
+...
+Time: 0.011
+
+OK (3 tests)
+
+Testing Foundation:
+JUnit version 4.13.2
+..
+Time: 0.014
+
+OK (2 tests)
+
+Testing FreecellGame:
+JUnit version 4.13.2
+.....
+Time: 0.039
+
+OK (5 tests)
+
+Testing completed. Wed Sep 30 11:46:42 AM EDT 2026
